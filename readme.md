@@ -1,4 +1,4 @@
-📊 AWS Cost Monitoring & Slack Notifications
+📊 automated_aws_cost_optimization
 
 ![image alt](https://github.com/irfan123-mohammed/automated_aws_cost_optimization/blob/fc30a6efe6bf62c67a7213ce81fbd13552548558/Screenshot%202025-09-25%20091341.png)
 
@@ -161,6 +161,7 @@ IAM Policy (policy.json):
    Send directly to Slack:
 
       aws-cost --slack-token <your_token> --slack-channel <channel_id>
+
 
 
 
