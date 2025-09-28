@@ -1,0 +1,21 @@
+1)go to app.slack.com (login and create account)
+2)left side u will find channel click and create a channel(name it and keep it private)
+3)https://api.slack.com/apps go to this url and click create new app from scratch (name it and choose a workspace)
+4)now in your app dashboard left side you will find a option OAuth and Permissions scroll down to scope under bot token scopes add chat:Write,chat:Write.public
+5)now in the same dashboard you will find install app click install >> click allow,and copy the OAuth token
+6)now go back to slack channel and click on your channel view channle details there you will find channel id copy it.
+7)in you slack channel in the space bar write like this (/invite @your created app name) click enter now this application is joined
+8)paste your OAuth token and Channel id in this command(aws-cost --slack-token your OAuth token --slack-channel your channel id)
+9)after running above command you will find only specific services details to view all the services in detail and in file format first go to OAuth permissions,reinstall the app to apply the changes and add (files:write) permission and run this command
+(sudo apt install -y python3 python3 python3-pip python3-venv)
+(python3 -m venv venv
+source venv/bin/activate)
+(pip install slack-sdk)
+(vi upload_cost_report.py)
+(aws-cost --text> file_to_upload(name anything u want here))
+(python upload_cost_report.py)
+now you can view it all the services
+10)to run it everyday use this commands
+crontab -e
+0 9 * * * /usr/bin/python3 /path/to/slack_file_upload.py >> /path/to/slack_cron.log 2>&1 (this will run the code everyday 9 am u can set cron expression according to your need)
+
